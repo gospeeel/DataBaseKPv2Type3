@@ -13,8 +13,8 @@ struct pc {
 	char formfactor[50];
 	char typesize[50];
 	int height;
-	float dlina;//3 типа данных
-	float shirota;
+	float dlina;//3 ГІГЁГЇГ  Г¤Г Г­Г­Г»Гµ
+	float shirina;
 	char color[50];
 	char availability[50];
 }*comp;
@@ -33,26 +33,26 @@ void dobavit(PC* comp, int shet)
 {
 	if (shet > 50)
 	{
-		printf("На диске не достаточно памяти для записи документа");
+		printf("ГЌГ  Г¤ГЁГ±ГЄГҐ Г­ГҐ Г¤Г®Г±ГІГ ГІГ®Г·Г­Г® ГЇГ Г¬ГїГІГЁ Г¤Г«Гї Г§Г ГЇГЁГ±ГЁ Г¤Г®ГЄГіГ¬ГҐГ­ГІГ ");
 
 	}
 	for (int a = 0; a < shet; a++)
 	{
-		printf("Введите название производителя:");
+		printf("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г Г§ГўГ Г­ГЁГҐ ГЇГ°Г®ГЁГ§ГўГ®Г¤ГЁГІГҐГ«Гї:");
 		scanf("%s", &comp[a].manufacturer);
-		printf("Введите форм-фактор платы:");
+		printf("Г‚ГўГҐГ¤ГЁГІГҐ ГґГ®Г°Г¬-ГґГ ГЄГІГ®Г° ГЇГ«Г ГІГ»:");
 		scanf("%s", &comp[a].formfactor);
-		printf("Введите типоразмер корпуса:");
+		printf("Г‚ГўГҐГ¤ГЁГІГҐ ГІГЁГЇГ®Г°Г Г§Г¬ГҐГ° ГЄГ®Г°ГЇГіГ±Г :");
 		scanf("%s", &comp[a].typesize);
-		printf("Введите высоту корпуса:");
+		printf("Г‚ГўГҐГ¤ГЁГІГҐ ГўГ»Г±Г®ГІГі ГЄГ®Г°ГЇГіГ±Г :");
 		scanf("%d", &comp[a].height);
-		printf("Введите длину корпуса:");
+		printf("Г‚ГўГҐГ¤ГЁГІГҐ Г¤Г«ГЁГ­Гі ГЄГ®Г°ГЇГіГ±Г :");
 		scanf("%f", &comp[a].dlina);
-		printf("Введите широту корпуса:");
-		scanf("%f", &comp[a].shirota);
-		printf("Введите цвет корпуса:");
+		printf("Г‚ГўГҐГ¤ГЁГІГҐ ГёГЁГ°Г®ГІГі ГЄГ®Г°ГЇГіГ±Г :");
+		scanf("%f", &comp[a].shirina);
+		printf("Г‚ГўГҐГ¤ГЁГІГҐ Г¶ГўГҐГІ ГЄГ®Г°ГЇГіГ±Г :");
 		scanf("%s", &comp[a].color);
-		printf("Введите наличие подсветки/окна и пр.:");
+		printf("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г Г«ГЁГ·ГЁГҐ ГЇГ®Г¤Г±ГўГҐГІГЄГЁ/Г®ГЄГ­Г  ГЁ ГЇГ°.:");
 		scanf("%s", &comp[a].availability);
 		printf("\n");
 	}
@@ -61,11 +61,11 @@ void dobavit(PC* comp, int shet)
 void output(PC* comp, int shet)
 {
 	printf("---------------------------------------------------------------------------------------------------------\n");
-	printf("|| Название производителя  ||  Форм-фактор ||  Типоразмер ||  Высота  ||    Длина  ||   Широта  ||  Цвет  ||  Наличие подсветки  ||\n");
+	printf("|| ГЌГ Г§ГўГ Г­ГЁГҐ ГЇГ°Г®ГЁГ§ГўГ®Г¤ГЁГІГҐГ«Гї  ||  Г”Г®Г°Г¬-ГґГ ГЄГІГ®Г° ||  Г’ГЁГЇГ®Г°Г Г§Г¬ГҐГ° ||  Г‚Г»Г±Г®ГІГ   ||    Г„Г«ГЁГ­Г   ||   ГГЁГ°Г®ГІГ   ||  Г–ГўГҐГІ  ||  ГЌГ Г«ГЁГ·ГЁГҐ ГЇГ®Г¤Г±ГўГҐГІГЄГЁ  ||\n");
 	printf("---------------------------------------------------------------------------------------------------------\n");
 	for (int b = 0; b < shet; b++)
 	{
-		printf("||      %s              ||      %s      ||       %s       ||   %dсм   || %fсм || %fсм ||  %s   ||   %s   ||\n", comp[b].manufacturer, comp[b].formfactor, comp[b].typesize, comp[b].height, comp[b].dlina, comp[b].shirota, comp[b].color, comp[b].availability);
+		printf("||      %s              ||      %s      ||       %s       ||   %dГ±Г¬   || %fГ±Г¬ || %fГ±Г¬ ||  %s   ||   %s   ||\n", comp[b].manufacturer, comp[b].formfactor, comp[b].typesize, comp[b].height, comp[b].dlina, comp[b].shirina, comp[b].color, comp[b].availability);
 		printf("---------------------------------------------------------------------------------------------------------\n");
 	}
 	system("pause");
@@ -74,14 +74,14 @@ void output(PC* comp, int shet)
 
 void displayN2(PC* comp, int shet)
 {
-	printf("||%s|%s||%s||%dсм||%fсм||%fсм||%s||%s||\n", (comp + shet)->manufacturer, (comp + shet)->formfactor, (comp + shet)->typesize, (comp + shet)->height, (comp + shet)->dlina, (comp + shet)->shirota, (comp + shet)->color, (comp + shet)->availability);
+	printf("||%s|%s||%s||%dГ±Г¬||%fГ±Г¬||%fГ±Г¬||%s||%s||\n", (comp + shet)->manufacturer, (comp + shet)->formfactor, (comp + shet)->typesize, (comp + shet)->height, (comp + shet)->dlina, (comp + shet)->shirina, (comp + shet)->color, (comp + shet)->availability);
 	printf("---------------------------------------------------------------------------------------------------------------------------\n");
 }
 
 void display()
 {
 	printf("--------------------------------------------------------------------------------------------------------------------------------\n");
-	printf("|| Название производителя  ||  Форм-фактор ||  Типоразмер ||  Высота  ||   Длина  ||  Широта  || Цвет  ||  Наличие подсветки  ||\n");
+	printf("|| ГЌГ Г§ГўГ Г­ГЁГҐ ГЇГ°Г®ГЁГ§ГўГ®Г¤ГЁГІГҐГ«Гї  ||  Г”Г®Г°Г¬-ГґГ ГЄГІГ®Г° ||  Г’ГЁГЇГ®Г°Г Г§Г¬ГҐГ° ||  Г‚Г»Г±Г®ГІГ   ||   Г„Г«ГЁГ­Г   ||  ГГЁГ°Г®ГІГ   || Г–ГўГҐГІ  ||  ГЌГ Г«ГЁГ·ГЁГҐ ГЇГ®Г¤Г±ГўГҐГІГЄГЁ  ||\n");
 	printf("--------------------------------------------------------------------------------------------------------------------------------\n");
 }
 
@@ -89,19 +89,19 @@ PC poisk(PC* comp, int shet)
 {
 	char krit[10];
 	int vibor, krit2, krit3, krit4, krit5, krit6, ukaz2 = 1;
-	printf("Выберите критерий поиска\n");
-	printf("1.Название Производителя\n");
-	printf("2.Форм-фактор\n");
-	printf("3.Типоразмер\n");
-	printf("4.Высота\n");
-	printf("5.Цвет\n");
-	printf("6.Подсветка и пр.\n");
-	printf("7.Длина\n");
-	printf("8.Широта\n");
+	printf("Г‚Г»ГЎГҐГ°ГЁГІГҐ ГЄГ°ГЁГІГҐГ°ГЁГ© ГЇГ®ГЁГ±ГЄГ \n");
+	printf("1.ГЌГ Г§ГўГ Г­ГЁГҐ ГЏГ°Г®ГЁГ§ГўГ®Г¤ГЁГІГҐГ«Гї\n");
+	printf("2.Г”Г®Г°Г¬-ГґГ ГЄГІГ®Г°\n");
+	printf("3.Г’ГЁГЇГ®Г°Г Г§Г¬ГҐГ°\n");
+	printf("4.Г‚Г»Г±Г®ГІГ \n");
+	printf("5.Г–ГўГҐГІ\n");
+	printf("6.ГЏГ®Г¤Г±ГўГҐГІГЄГ  ГЁ ГЇГ°.\n");
+	printf("7.Г„Г«ГЁГ­Г \n");
+	printf("8.ГГЁГ°Г®ГІГ \n");
 	scanf("%d", &vibor);
 	if (vibor == 1)
 	{
-		printf("Введите название производителя\n");
+		printf("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г Г§ГўГ Г­ГЁГҐ ГЇГ°Г®ГЁГ§ГўГ®Г¤ГЁГІГҐГ«Гї\n");
 		scanf("%s", krit);
 		display();
 		for (int c = 0; c < shet; c++)
@@ -114,7 +114,7 @@ PC poisk(PC* comp, int shet)
 	}
 	if (vibor == 2)
 	{
-		printf("Введите форм-фактор\n");
+		printf("Г‚ГўГҐГ¤ГЁГІГҐ ГґГ®Г°Г¬-ГґГ ГЄГІГ®Г°\n");
 		scanf("%s", &krit2);
 		display();
 		for (int c = 0; c < shet; c++)
@@ -130,7 +130,7 @@ PC poisk(PC* comp, int shet)
 	}
 	if (vibor == 3)
 	{
-		printf("Введите типоразмер корпуса\n");
+		printf("Г‚ГўГҐГ¤ГЁГІГҐ ГІГЁГЇГ®Г°Г Г§Г¬ГҐГ° ГЄГ®Г°ГЇГіГ±Г \n");
 		scanf("%s", &krit4);
 		display();
 		for (int c = 0; c < comp; c++)
@@ -145,7 +145,7 @@ PC poisk(PC* comp, int shet)
 	}
 	if (vibor == 4)
 	{
-		printf("Высота\n");
+		printf("Г‚Г»Г±Г®ГІГ \n");
 		scanf("%d", &krit3);
 		display();
 		for (int c = 0; c < shet; c++)
@@ -160,7 +160,7 @@ PC poisk(PC* comp, int shet)
 	}
 	if (vibor == 5)
 	{
-		printf("Цвет\n");
+		printf("Г–ГўГҐГІ\n");
 		scanf("%s", &krit5);
 		display();
 		for (int c = 0; c < shet; c++)
@@ -175,7 +175,7 @@ PC poisk(PC* comp, int shet)
 	}
 	if (vibor == 6)
 	{
-		printf("Подсветка\n");
+		printf("ГЏГ®Г¤Г±ГўГҐГІГЄГ \n");
 		scanf("%s", &krit6);
 		display();
 		for (int c = 0; c < shet; c++)
@@ -190,7 +190,7 @@ PC poisk(PC* comp, int shet)
 	}
 	if (vibor == 7)
 	{
-		printf("Длина\n");
+		printf("Г„Г«ГЁГ­Г \n");
 		scanf("%f", &krit3);
 		display();
 		for (int c = 0; c < shet; c++)
@@ -205,12 +205,12 @@ PC poisk(PC* comp, int shet)
 	}
 	if (vibor == 8)
 	{
-		printf("Широта\n");
+		printf("ГГЁГ°Г®ГІГ \n");
 		scanf("%f", &krit3);
 		display();
 		for (int c = 0; c < shet; c++)
 		{
-			if ((comp + c)->shirota == krit3)
+			if ((comp + c)->shirina == krit3)
 			{
 				displayN2(comp, c);
 			}
@@ -227,22 +227,22 @@ int vstavit(char* nazvaniefaila, PC* comp, int shet)
 	int c;
 	if ((data = fopen(nazvaniefaila, "wt")) == NULL)
 	{
-		fprintf(stderr, "Файл нельзя открыть для записи документа \n");
+		fprintf(stderr, "Г”Г Г©Г« Г­ГҐГ«ГјГ§Гї Г®ГІГЄГ°Г»ГІГј Г¤Г«Гї Г§Г ГЇГЁГ±ГЁ Г¤Г®ГЄГіГ¬ГҐГ­ГІГ  \n");
 		system("pause");
 		return -1;
 	}
 	else
 	{
 		fprintf(data, "-----------------------------------------------------------------------------------------------------------------------------\n");
-		fprintf(data, "|| Название производителя  ||  Форм-фактор ||  Типоразмер ||  Высота  || Длина  || Широта  || Цвет  ||  Наличие подсветки  ||\n");
+		fprintf(data, "|| ГЌГ Г§ГўГ Г­ГЁГҐ ГЇГ°Г®ГЁГ§ГўГ®Г¤ГЁГІГҐГ«Гї  ||  Г”Г®Г°Г¬-ГґГ ГЄГІГ®Г° ||  Г’ГЁГЇГ®Г°Г Г§Г¬ГҐГ° ||  Г‚Г»Г±Г®ГІГ   || Г„Г«ГЁГ­Г   || ГГЁГ°Г®ГІГ   || Г–ГўГҐГІ  ||  ГЌГ Г«ГЁГ·ГЁГҐ ГЇГ®Г¤Г±ГўГҐГІГЄГЁ  ||\n");
 		fprintf(data, "-----------------------------------------------------------------------------------------------------------------------------\n");
 		for (c = 0; c < shet; c++)
 		{
-			fprintf(data, "||%s||%s|%s||%d||%f||%f||%s||%s||\n", comp[c].manufacturer, comp[c].formfactor, comp[c].typesize, comp[c].height, comp[c].dlina, comp[c].shirota, comp[c].color, comp[c].availability);
+			fprintf(data, "||%s||%s|%s||%d||%f||%f||%s||%s||\n", comp[c].manufacturer, comp[c].formfactor, comp[c].typesize, comp[c].height, comp[c].dlina, comp[c].shirina, comp[c].color, comp[c].availability);
 			fprintf(data, "--------------------------------------------------------------------------------------------------------------\n");
 		}
 		fclose(data);
-		printf("Данные успешно записаны");
+		printf("Г„Г Г­Г­Г»ГҐ ГіГ±ГЇГҐГёГ­Г® Г§Г ГЇГЁГ±Г Г­Г»");
 		system("pause");
 	}
 	return 0;
@@ -255,7 +255,7 @@ int prochitat(char* nazvaniefaila)
 	open = fopen(nazvaniefaila, "r");
 	if (open != NULL)
 	{
-		printf("Файл успешно открыт\n");
+		printf("Г”Г Г©Г« ГіГ±ГЇГҐГёГ­Г® Г®ГІГЄГ°Г»ГІ\n");
 		while (!feof(open))
 		{
 			fgets(file, 200, open);
@@ -268,7 +268,7 @@ int prochitat(char* nazvaniefaila)
 	}
 	else
 	{
-		printf("Файл не удалось открыть\n");
+		printf("Г”Г Г©Г« Г­ГҐ ГіГ¤Г Г«Г®Г±Гј Г®ГІГЄГ°Г»ГІГј\n");
 		system("pause");
 		return -1;
 	}
@@ -280,9 +280,9 @@ void sortirovka(PC* comp, int shet)
 {
 	char str[50];
 	int height1;
-	float dlina1, shirota1;
-	for (int с = 1; с < shet; с++) {
-		for (int j = 0; j < shet - с; j++)
+	float dlina1, shirina1;
+	for (int Г± = 1; Г± < shet; Г±++) {
+		for (int j = 0; j < shet - Г±; j++)
 			if (strcmp(comp[j].color, comp[j + 1].color) > 0) {
 				strcpy(str, comp[j].manufacturer);
 				strcpy(comp[j].manufacturer, comp[j + 1].manufacturer);
@@ -313,9 +313,9 @@ void sortirovka(PC* comp, int shet)
 				comp[j].dlina = comp[j + 1].dlina;
 				comp[j + 1].dlina = dlina1;
 
-				shirota1 = comp[j].shirota;
-				comp[j].shirota = comp[j + 1].shirota;
-				comp[j + 1].shirota = shirota1;
+				shirina1 = comp[j].shirina;
+				comp[j].shirina = comp[j + 1].shirina;
+				comp[j + 1].shirina = shirina1;
 
 			}
 	}
@@ -330,28 +330,28 @@ int main()
 	PC p;
 	PC* comp = &p;
 	int size;
-	puts("Количество пользователей:");
+	puts("ГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«ГҐГ©:");
 	scanf("%d", &size);
 	comp = (struct PC*)malloc(size * sizeof(PC));
 	int ukaz = 1, vibor, viborr, compl;
 	char nazvaniefaila[100];
 	printf("________________________________________\n");
-	printf("|             База данных              |\n");
-	printf("|             Корпус ПК                |\n");
-	printf("|Студент: Островерхов Данила Евгеньевич|\n");
-	printf("|Группа:  бИСТ-221                     |\n");
+	printf("|             ГЃГ Г§Г  Г¤Г Г­Г­Г»Гµ              |\n");
+	printf("|             ГЉГ®Г°ГЇГіГ± ГЏГЉ                |\n");
+	printf("|Г‘ГІГіГ¤ГҐГ­ГІ: ГЋГ±ГІГ°Г®ГўГҐГ°ГµГ®Гў Г„Г Г­ГЁГ«Г  Г…ГўГЈГҐГ­ГјГҐГўГЁГ·|\n");
+	printf("|ГѓГ°ГіГЇГЇГ :  ГЎГ€Г‘Г’-221                     |\n");
 	printf("|______________________________________|\n");
 	system("pause");
 	while (ukaz)
 	{
 		system("cls");
-		printf("Выберите функцию\n1.Ввод значений.\n2.Вывод значений\n3.Поиск структуры по заданному критерию\n4.Сортировка данных\n5.Запись данных в файл\n6.Чтение данных из файла\n0.Выход из программы\n");
+		printf("Г‚Г»ГЎГҐГ°ГЁГІГҐ ГґГіГ­ГЄГ¶ГЁГѕ\n1.Г‚ГўГ®Г¤ Г§Г­Г Г·ГҐГ­ГЁГ©.\n2.Г‚Г»ГўГ®Г¤ Г§Г­Г Г·ГҐГ­ГЁГ©\n3.ГЏГ®ГЁГ±ГЄ Г±ГІГ°ГіГЄГІГіГ°Г» ГЇГ® Г§Г Г¤Г Г­Г­Г®Г¬Гі ГЄГ°ГЁГІГҐГ°ГЁГѕ\n4.Г‘Г®Г°ГІГЁГ°Г®ГўГЄГ  Г¤Г Г­Г­Г»Гµ\n5.Г‡Г ГЇГЁГ±Гј Г¤Г Г­Г­Г»Гµ Гў ГґГ Г©Г«\n6.Г—ГІГҐГ­ГЁГҐ Г¤Г Г­Г­Г»Гµ ГЁГ§ ГґГ Г©Г«Г \n0.Г‚Г»ГµГ®Г¤ ГЁГ§ ГЇГ°Г®ГЈГ°Г Г¬Г¬Г»\n");
 		scanf("%d", &vibor);
 		system("cls");
 		switch (vibor)
 		{
 		case 1:
-			printf("Введите кол-во записей (меньше 50)\n");
+			printf("Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ®Г«-ГўГ® Г§Г ГЇГЁГ±ГҐГ© (Г¬ГҐГ­ГјГёГҐ 50)\n");
 			scanf("%d", &kolichestvo);
 			dobavit(comp, kolichestvo);
 			break;
@@ -370,13 +370,13 @@ int main()
 			break;
 
 		case 5:
-			printf("Введите название файла\n");
+			printf("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г Г§ГўГ Г­ГЁГҐ ГґГ Г©Г«Г \n");
 			scanf("%s", &nazvaniefaila);
 			vstavit(nazvaniefaila, comp, kolichestvo);
 			break;
 
 		case 6:
-			printf("Введите название файла\n");
+			printf("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г Г§ГўГ Г­ГЁГҐ ГґГ Г©Г«Г \n");
 			scanf("%s", &nazvaniefaila);
 			prochitat(nazvaniefaila);
 			system("pause");
@@ -384,11 +384,11 @@ int main()
 
 		case 0:
 			ukaz = 0;
-			printf("Завершение работы программы\n");
+			printf("Г‡Г ГўГҐГ°ГёГҐГ­ГЁГҐ Г°Г ГЎГ®ГІГ» ГЇГ°Г®ГЈГ°Г Г¬Г¬Г»\n");
 			break;
 
 		default:
-			puts("Выбранный вариант нельзя выполнить");
+			puts("Г‚Г»ГЎГ°Г Г­Г­Г»Г© ГўГ Г°ГЁГ Г­ГІ Г­ГҐГ«ГјГ§Гї ГўГ»ГЇГ®Г«Г­ГЁГІГј");
 
 		}
 
